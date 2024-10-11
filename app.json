@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Gentle Clown",
+    "slug": "gentle-clown",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.prajjmon.gentleclown"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.prajjmon.gentleclown"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c4c0e16c-e013-4aeb-b2b5-cf4a42e5bcda"
+      }
+    },
+    "owner": "prajjmon",
+    "updates": {
+      "url": "https://u.expo.dev/c4c0e16c-e013-4aeb-b2b5-cf4a42e5bcda"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
