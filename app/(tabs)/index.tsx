@@ -1,9 +1,10 @@
 import JokeArea from "@/components/JokeArea";
-import { Text, View } from "react-native";
+import { styles } from "@/constants/DefaultStyles";
+import { View } from "react-native";
 
 export default function HomeScreen() {
     return (
-        <View>
+        <View style={[styles.container, {flexDirection: 'column'},]}>
             <JokeArea />            
         </View>
     )
