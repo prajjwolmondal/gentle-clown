@@ -1,6 +1,23 @@
-# Welcome to your Expo app 👋
+# Welcome to Gentle Clown 👋😁
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a project to re-create an old app ([JokeMachine](https://github.com/prajjwolmondal/JokeMachine/tree/master)) using [React Native](https://reactnative.dev/) and [Expo](https://expo.dev).
+
+My target audience for this app is my fiancé, so the jokes are all what I think she'd find funny.
+
+## Roadmap
+
+1. ~~Create OneLineJoke component which will return the component currently in this file~~
+1. ~~Create a MultiLineJoke component which will follow the same pattern as 1.~~
+1. ~~Add logic in this component to randomly return either OneLineJoke or MultiLineJoke~~
+1. ~~Break out big component into smaller components~~
+1. Style the fuck out of the app
+1. Create and add app icon
+1. Publish app
+1. Create a KnockKnockJoke component with vibrate functionality
+1. Create backend that will provide jokes, and voting functionality
+1. Add voting functionality to app
+1. Add joke history in "Info"
+
 
 ## Get started
 
