@@ -8,7 +8,7 @@ interface JokeTriggerButtonProps {
 const JokeTriggerButton: React.FC<JokeTriggerButtonProps> = ({handleClick, jokeShown}) => {
     return (
         <View style={styles.anotherOneButton}>
-            <Button onPress={handleClick} title={ jokeShown ? 'Another one!' : 'Make me laugh!'} />
+            <Button color='#000000' onPress={handleClick} title={ jokeShown ? 'Another one!' : 'Make me laugh!'} />
         </View>
     );
 }

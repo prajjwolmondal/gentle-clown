@@ -101,7 +101,7 @@ export default function JokeArea() {
                     </Text>
                 )}
             </View>
-            <View style={{ flex: 0.25, backgroundColor: 'green' }}>
+            <View style={{ flex: 0.25 }}>
                 <JokeTriggerButton handleClick={handleClick} jokeShown={jokeShown} />
             </View>
         </>
@@ -115,6 +115,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        fontSize: 18,
+        fontSize: 24,
     }
 })
