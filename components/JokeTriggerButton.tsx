@@ -1,4 +1,5 @@
-import { Button, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Button } from "react-native-paper";
 
 interface JokeTriggerButtonProps {
     jokeShown: boolean;
@@ -8,7 +9,9 @@ interface JokeTriggerButtonProps {
 const JokeTriggerButton: React.FC<JokeTriggerButtonProps> = ({handleClick, jokeShown}) => {
     return (
         <View style={styles.anotherOneButton}>
-            <Button color='#000000' onPress={handleClick} title={ jokeShown ? 'Another one!' : 'Make me laugh!'} />
+            <Button mode="elevated" onPress={handleClick}>
+              { jokeShown ? 'Another one!' : 'Make me laugh!' }
+            </Button>
         </View>
     );
 }
