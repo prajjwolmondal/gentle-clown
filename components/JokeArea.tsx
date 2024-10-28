@@ -26,7 +26,8 @@ const multiLineJokes = [
     ["What did one DNA say to the other DNA?", "Do these genes make me look fat?"],
     ["What happens to an illegally parked frog?", "It gets toad away."],
     ["Why aren't dogs good dancers?", "Because they have two left feet."],
-    ["What's brown and sticky?", "A stick."]
+    ["What's brown and sticky?", "A stick."],
+    ["My twin sister called me from prison.", "She said: \"You know how we finish each other's sentences?\""],
 ];
 
 // First two lines of "Knock, knock" & "Who's there?" aren't recorded below as they're the same across all jokes
