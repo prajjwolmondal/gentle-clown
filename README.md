@@ -10,7 +10,7 @@ My target audience for this app is my fiancé, so the jokes are all what I think
 1. ~~Create a MultiLineJoke component which will follow the same pattern as 1.~~
 1. ~~Add logic in this component to randomly return either OneLineJoke or MultiLineJoke~~
 1. ~~Break out big component into smaller components~~
-1. Style the fuck out of the app
+1. ~~Style the fuck out of the app~~
 1. Create and add app icon
 1. Publish app
 1. Create a KnockKnockJoke component with vibrate functionality

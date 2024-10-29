@@ -10,7 +10,10 @@ export default function InfoScreen() {
                 <Card style={styles.card}>
                     <Card.Content>
                         <Text style={{ fontSize: 20}}>
-                            Gentle clown v0.0.3
+                            Gentle clown v0.0.4
+                        </Text>
+                        <Text style={{ fontSize: 14, paddingTop: 20}}>
+                            Made by Prajjwol Mondal
                         </Text>
                     </Card.Content>
                 </Card>
@@ -22,7 +25,7 @@ export default function InfoScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 50,
+        paddingTop: 100,
         padding: 30,
         justifyContent: 'center', 
         alignItems: 'center',
@@ -30,7 +33,4 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: 'white',
     },
-    text: {
-        fontSize: 24,
-    }
 })
