@@ -1,15 +1,16 @@
+import { Joke } from '@/types/Joke';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 interface OneLineJokeProps {
-  joke: string;
+  joke: Joke;
 }
 
 const OneLineJokeComponent: React.FC<OneLineJokeProps> = ({ joke }) => {
   return (
     <View style={styles.container}>
         <Text style={styles.text}>
-            {joke}
+            {joke.content}
         </Text>
     </View>
   );

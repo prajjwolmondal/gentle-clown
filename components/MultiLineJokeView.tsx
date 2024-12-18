@@ -1,18 +1,17 @@
+import { Joke } from '@/types/Joke';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 interface MultiLineJokeProps {
-  joke: string[];
+  joke: Joke;
 }
 
 const MultiLineJokeComponent: React.FC<MultiLineJokeProps> = ({ joke }) => {
   return (
     <View style={styles.container}>
-      {joke.map((line, index) => (
-        <Text key={index} style={styles.text}>
-          {line}
+        <Text style={styles.text}>
+          {joke.content.join("\n")}
         </Text>
-      ))}
     </View> 
   );
 };
