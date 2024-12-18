@@ -7,11 +7,18 @@ interface MultiLineJokeProps {
 }
 
 const MultiLineJokeComponent: React.FC<MultiLineJokeProps> = ({ joke }) => {
+
+  const multiLineJoke = joke.content.map(content => {
+    return (
+      <Text style={styles.text}>
+        {content}
+      </Text>
+    );
+  });
+
   return (
     <View style={styles.container}>
-        <Text style={styles.text}>
-          {joke.content.join("\n")}
-        </Text>
+        {multiLineJoke}
     </View> 
   );
 };
@@ -19,8 +26,8 @@ const MultiLineJokeComponent: React.FC<MultiLineJokeProps> = ({ joke }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
-        justifyContent: 'center', 
-        alignItems: 'center',
+        justifyContent: 'flex-start', 
+        alignItems: 'flex-start',
     },
     text: {
         fontSize: 24,
