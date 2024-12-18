@@ -11,30 +11,40 @@ import { Joke } from '@/types/Joke';
 export default function JokeArea() {
     const [jokeIndex, setJokeIndex] = useState(-1);
     const [jokes, setJokes] = useState<Joke[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    const fetchMoreJokesThreshold = 2;
+    const currentJoke = jokes[jokeIndex];
 
     function handleClick(): void {
         Vibration.vibrate(80); // Haptic feedback on button click
-        setJokeIndex((prevIndex) => prevIndex + 1); // TODO: fetch more when index reaches end
+        setJokeIndex((prevIndex) => prevIndex + 1);
+
+        if (jokeIndex >= jokes.length - fetchMoreJokesThreshold && !loading) {
+            setLoading(true);
+            fetchJokes();
+        }
+    }
+
+    const fetchJokes = async () => {
+        try {
+            //TODO: The base URL should be overridable
+            const response = await fetch("http://localhost:8000/random-joke?limit=5");
+            const newJokes: Joke[] = await response.json();
+            setJokes((prevJokes) => [...prevJokes, ...newJokes]);
+        } catch (error) {
+            console.error('Error fetching jokes:', error);
+        } finally {
+            setLoading(false);
+        }
     }
 
     useEffect(() => {
-        const fetchJokes = async () => {
-            try {
-                const response = await fetch("http://localhost:8000/random-joke?limit=5");
-                const data: Joke[] = await response.json();
-                setJokes(data);
-            } catch (error) {
-                console.error('Error fetching jokes:', error);
-            }
-        }
-
         fetchJokes();
     }, []);
 
-    const currentJoke = jokes[jokeIndex];
-
     return (
-        <div>
+        <View>
             <Card style={styles.container}>
                 <Card.Content>
                     {jokeIndex >= 0 ? (
@@ -51,7 +61,7 @@ export default function JokeArea() {
             <View style={{ flex: 0.4 }}>
                 <JokeTriggerButton handleClick={handleClick} jokeShown={jokeIndex >= 0} />
             </View>
-        </div>
+        </View>
     );
 }
 
